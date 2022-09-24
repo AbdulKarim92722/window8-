@@ -1,0 +1,1458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+    body{
+        background-color:rgba(24,0,82,255);
+        margin-right: 15%;
+    }
+        .container{
+            height:35vh;
+            width: 60vw;
+           display: grid;
+           margin: auto;
+           margin-top:5%;
+           grid-gap: 5px;
+            
+           grid-template-columns: 2fr 2fr 1fr 1fr 1fr 0.7fr;
+           grid-template-rows: 1fr 1fr 1fr 1fr;
+
+           grid-template-areas: 
+           "mail celender internet store image image"
+           "people photos maps skydrive travle travle"
+           "masseging finance sports sports game camera"
+           "dekstop weather news news music video";
+        }  
+        .mail{
+            height: 100px;
+            position: relative;
+            grid-area: mail;
+        }
+        .flipcard_mail{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            transition: all 0.5s ease;
+            transform-style: preserve-3d;
+            background: transparent;
+
+        }
+        .flipcard_mail:hover{
+            transform: rotateY(180deg);
+        }
+        .mail_front{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+            background:#00879d;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            font-family: 'Roboto', sans-serif;
+            
+        }
+        .mail_back{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+            transform: rotateY(180deg);
+            background:#00879d;
+            
+    
+
+        }
+
+        /*.mail{
+            height:100px;
+            background:#00859b;
+            grid-area: mail;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        
+        }*/
+        .mail_img{
+            height: 50%;
+            width: 50%;
+            padding-left: 25%;
+            padding-top: 8%;
+           
+        }
+        .mail_p{
+            display: inline-block;
+            font-size: 14px;
+            padding-left: 5px;
+            text-transform: capitalize;
+            color:#d4edf0;
+            
+        }
+           .celender{
+            height: 100px;
+            position: relative;
+            grid-area: celender;
+           }
+
+           .flipcard_celender{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            transition: all 0.5s ease;
+            transform-style: preserve-3d;
+            background: transparent;
+           }
+           .flipcard_celender:hover{
+            transform: rotateY(180deg);
+           }
+
+           .celender_front{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+            background:#00879d;
+            font-family: 'Roboto', sans-serif;
+           }
+           
+           .celender_back{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+            transform: rotateY(180deg);
+            background:#00879d;
+           }
+
+        /*.Celender{
+            height: 100px;
+           background:#5435ae;
+            grid-area: celender
+
+        }
+        */
+        .Celender_img{
+           height: 50%;
+           padding-left: 40%;
+           padding-top: 8%;
+        }
+
+       .Celender_p{
+            padding-top: 4%;
+            padding-left: 5px;
+            font-size: 14px;
+            text-transform: capitalize;
+            color:#d4edf0;
+            
+           
+       }
+
+       .internet{
+            height: 100px;
+            position: relative;
+            grid-area:internet;
+       }
+          .flipcard_internet{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            transition: all 0.5s ease;
+            transform-style: preserve-3d;
+            background: transparent;
+          }
+
+           .flipcard_internet:hover{
+            transform: rotateY(180deg);
+           }
+
+           .internet_front{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+            background:#00879d;
+            font-family: 'Roboto', sans-serif;
+           }
+
+           .internet_back{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+            transform: rotateY(180deg);
+            background:#00879d;
+           }
+        /*.internet{
+            height: 100px;
+            background-color: #2d89ef;
+            grid-area: internet;
+            justify-content: space-between;
+        }*/
+     
+        .internet_img{
+            height: 60px;
+            justify-items: center;
+            padding-top: 10%;
+            padding-left: 20%;
+            
+            
+        }
+        
+        .internet_p{
+            display: inline-block;
+            font-size: 14px;
+            text-transform: capitalize;
+            color:#d4edf0;
+            padding-top: 6%;
+            padding-left: 4px;
+
+        }
+        .store{
+            height: 100px;
+            position: relative;
+            grid-area:store;
+        }
+        .flipcard_store{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            transition: all 0.5s ease;
+            transform-style: preserve-3d;
+            background: transparent;
+        }
+
+           .flipcard_store:hover{
+            transform: rotateY(180deg);
+           }
+
+         .store_front{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+            background:#00879d;
+            font-family: 'Roboto', sans-serif;
+         }
+
+         .store_back{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+            transform: rotateY(180deg);
+            background:#00879d;
+         }
+
+        /*.store{
+            height:100px;
+             background:#00a300;
+             grid-area: store;
+
+        }*/
+
+
+        .store_img{
+               height: 50px;
+               padding-left: 25%;
+               padding-top: 18%;
+               
+
+        }
+        .store_p{
+            font-size: 14px;
+            text-transform: capitalize;
+            color:#d4edf0;
+            padding-top: 5%;
+            padding-left: 5px;
+        }
+
+
+          .image{
+            height: 100px;
+            position: relative;
+            grid-area:image;
+            margin-left: 20%;
+          }
+
+          .flipcard_image{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            transition: all 0.5s ease;
+            transform-style: preserve-3d;
+            background: transparent;
+          }
+
+          .flipcard_image:hover{
+            transform: rotateY(180deg);
+           }
+
+           .image_front{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+            background:#00879d;
+            background: url(./images\ \(1\).jpg);
+            background-size: cover;
+            font-family: 'Roboto', sans-serif;
+            
+           }
+            
+           .image_back{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+            transform: rotateY(180deg);
+            background:#00879d;
+           }
+          
+
+        /*.image{
+            margin-left: 20%;
+            height: 100px;
+            background: url(./images\ \(1\).jpg);
+            background-size: cover;
+            grid-area: image;
+            
+        }*/
+       
+        .img_p{
+           padding-top: 49%;
+           padding-left: 5px;
+            font-size: 14px;
+            text-transform: capitalize;
+            color:#d4edf0;
+           
+        }
+         
+        .people{
+            height: 100px;
+            position: relative;
+            grid-area:people;
+        }
+
+        .flipcard_people{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            transition: all 0.5s ease;
+            transform-style: preserve-3d;
+            background: transparent;
+        }
+
+        .flipcard_people:hover{
+            transform: rotateY(180deg);
+           }
+
+           .people_front{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+            background:#da542c;
+            font-family: 'Roboto', sans-serif;
+           }
+
+         .people_back{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+            transform: rotateY(180deg);
+            background: #da542c;;
+         }
+
+        /*.people{
+            height:100px;
+            background: #da542c;
+            grid-area: people;
+        }*/
+
+        .people_img{
+            height: 55px;
+            padding-top: 5%;
+            padding-left: 35%;
+        }
+
+        .people_p{
+            font-size: 14px;
+            text-transform: capitalize;
+            color:#d4edf0;
+           padding-top: 5%;
+           padding-left: 3%;
+        }
+
+        .photos{
+            height: 100px;
+            position: relative;
+            grid-area:photos;
+        }
+          .flipcard_photos{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            transition: all 0.5s ease;
+            transform-style: preserve-3d;
+            background: transparent;
+          }
+       
+          .flipcard_photos:hover{
+            transform: rotateY(180deg);
+           }
+
+           .photos_front{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+            background: #00859c;
+            font-family: 'Roboto', sans-serif;
+           }
+           
+           .photos_back{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+            transform: rotateY(180deg);
+            background: #00859c;
+           }
+
+
+         /*.photos{
+            height: 100px;
+            background: #00859c;
+            grid-area: photos;
+         }*/
+         
+         .photos_img{
+            height: 58px;
+            padding-left: 36%;
+            padding-top: 2%;            
+         }
+          .photos_p{
+            font-size: 14px;
+            text-transform: capitalize;
+            color:#d4edf0;
+            padding-top: 0.5%;
+            padding-left: 5px;
+
+          }
+            .maps{
+            height: 100px;
+            position: relative;
+            grid-area:maps;
+            }
+   
+         .flipcard_maps{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            transition: all 0.5s ease;
+            transform-style: preserve-3d;
+            background: transparent;
+         }
+
+         .flipcard_maps:hover{
+            transform: rotateY(180deg);
+           }
+
+           .maps_front{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+            background:#a300aa;
+            font-family: 'Roboto', sans-serif;
+           }
+
+           .maps_back{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+            transform: rotateY(180deg);
+            background:#a300aa;
+           }
+
+         /*.maps{
+            height: 100px;
+            background: #a300aa;
+            grid-area: maps;
+         }*/
+
+         .maps_img{
+                height: 65%;
+                padding-top: 4%;
+                 padding-left: 16%;
+
+         }
+          
+        .maps_p{
+            display: inline-block;
+            font-size: 14px;
+            text-transform: capitalize;
+            color:#d4edf0;
+            padding-top: 5%;
+            padding-left: 4px;
+        }
+          
+           .skydrive{
+            height: 100px;
+            position: relative;
+            grid-area:skydrive;
+           }
+
+           .flipcard_skydrive{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            transition: all 0.5s ease;
+            transform-style: preserve-3d;
+            background: transparent;
+           }
+
+           .flipcard_skydrive:hover{
+            transform: rotateY(180deg);
+           }
+   
+           .skydrive_front{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+            background:#0a59c2;
+            font-family: 'Roboto', sans-serif;
+           }
+
+           .skydrive_back{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+            transform: rotateY(180deg);
+            background:#0a59c2;
+           }
+
+         /*.skydrive{
+            height: 100px;
+            background:#0a59c2;
+            grid-area: skydrive;
+         }*/
+   
+        .skydrive_img{
+                   height: 70%;
+                   padding-left: 16%;
+                   
+        }
+
+        .sky_p{
+            display: inline-block;
+            font-size: 14px;
+            text-transform: capitalize;
+            color:#d4edf0;
+            padding-top: 7%;
+            padding-left: 5px;
+
+        }
+         .travle{
+            margin-left: 20%;
+            height: 100px;
+            position: relative;
+            grid-area:travle;
+
+         }
+        
+         .flipcard_travle{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            transition: all 0.5s ease;
+            transform-style: preserve-3d;
+            background: transparent;
+         }
+
+          .flipcard_travle:hover{
+            transform: rotateY(180deg);
+           }
+
+           .travle_front{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+            background:#00879d;
+            font-family: 'Roboto', sans-serif;
+           }
+
+           .travle_back{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+            transform: rotateY(180deg);
+            background:#00879d;
+           }
+
+          /*.travle{
+            margin-left: 20%;
+            height: 100px;
+            background:#00879d;
+            grid-area: travle;
+
+          }*/
+
+          .travle_img{
+             height: 75%;
+             padding-top: 3px;
+             padding-left: 30%;
+            
+          }
+
+          .travle_p{
+            padding-right: 20%;
+            padding-top: 0.5%;
+            padding-left: 5px;
+            font-size: 14px;
+            text-transform: capitalize;
+            color:#d4edf0;
+          }
+
+     
+          .masseging{
+            height: 100px;
+            position: relative;
+            grid-area:masseging;
+
+          }
+
+          .flipcard_masseging{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            transition: all 0.5s ease;
+            transform-style: preserve-3d;
+            background: transparent;
+          }
+
+          .flipcard_masseging:hover{
+            transform: rotateY(180deg);
+           }
+
+           .masseging_front{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+            background:#a300aa;
+            font-family: 'Roboto', sans-serif;
+           }
+
+           .masseging_back{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+            transform: rotateY(180deg);
+            background:#a300aa;
+           }
+
+/*.masseging{
+            height: 100px;
+            background:#a300aa;
+            grid-area: masseging;
+          }*/
+
+          .massege_img{
+                height: 60%;
+                padding-left: 34%;
+                padding-top: 6%;
+          }
+         
+          .massege_p{
+            padding-top: 1%;
+            padding-left: 5px;
+            font-size: 14px;
+            text-transform: capitalize;
+            color:#d4edf0;
+    
+          }
+
+         .finance{
+            height: 100px;
+            position: relative;
+            grid-area:finance;
+
+         }
+
+         .flipcard_finance{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            transition: all 0.5s ease;
+            transform-style: preserve-3d;
+            background: transparent;
+         }
+
+         .flipcard_finance:hover{
+            transform: rotateY(180deg);
+           }
+
+           .finance_front{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+            background:#008d00;
+            font-family: 'Roboto', sans-serif;
+           }
+
+           .finance_back{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+            transform: rotateY(180deg);
+            background:#008d00;
+           }
+
+          /*.finance{
+            height: 100px;
+            background:#008d00;
+            grid-area: finance;
+    }*/
+
+     .finance_img{
+            height: 50%;
+            padding-left:35%;
+            padding-top: 8%;
+
+     }
+
+     .finance_p{
+            font-size: 14px;
+            text-transform: capitalize;
+            color:#d4edf0;
+            padding-top:4%;
+            padding-left: 5px ;
+     }
+
+            .sports{
+            height: 100px;
+            position: relative;
+            grid-area:sports;
+
+
+            }
+
+            .flipcard_sports{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            transition: all 0.5s ease;
+            transform-style: preserve-3d;
+            background: transparent;
+             
+            }
+             
+            .flipcard_sports:hover{
+            transform: rotateY(180deg);
+           }
+
+           .sports_front{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+            background:#5435ae;
+            font-family: 'Roboto', sans-serif;
+           }
+
+           .sports_back{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+            transform: rotateY(180deg);
+            background:#5435ae;
+           }
+
+           
+          /* .sports{
+            height: 100px;
+           background:#5435ae;
+           grid-area: sports;
+        }*/
+
+          .sports_img{
+               height: 60%;
+               padding-left: 35%;
+               padding-top: 4%;
+          }
+          
+          .sports_p{
+            font-size: 14px;
+            text-transform: capitalize;
+            color:#d4edf0;
+            padding-top:3%;
+            padding-left: 5px;    
+        }
+
+
+        .game{
+            margin-left: 34%;
+            height: 100px;
+            position: relative;
+            grid-area:game;
+        }
+
+        .flipcard_game{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            transition: all 0.5s ease;
+            transform-style: preserve-3d;
+            background: transparent;
+        }
+
+        .flipcard_game:hover{
+            transform: rotateY(180deg);
+           }
+
+           .game_front{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+            background:#00a200;
+            font-family: 'Roboto', sans-serif;
+           }
+
+           .game_back{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+            transform: rotateY(180deg);
+            background:#00a200;
+           }
+
+        /*.game{
+            margin-left: 34%;
+             height: 100px;
+             background: #00a200;
+             grid-area: game;
+}*/
+
+          .game_img{
+              height: 50%;
+             padding-left: 18%;
+             padding-top: 20%;
+}
+
+           .game_p{
+            font-size: 14px;
+            text-transform: capitalize;
+            color:#d4edf0;
+            padding-top: 10%;
+            padding-left: 5px;
+}
+
+          .camera{
+            height: 100px;
+            position: relative;
+            grid-area:camera;
+          }
+          .flipcard_camera{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            transition: all 0.5s ease;
+            transform-style: preserve-3d;
+            background: transparent;
+          }
+
+          .flipcard_camera:hover{
+            transform: rotateY(180deg);
+           }
+
+           .camera_front{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+            background:#8f0097;
+            font-family: 'Roboto', sans-serif;
+           }
+
+           .camera_back{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+            transform: rotateY(180deg);
+            background:#8f0097;
+           }
+         /*.camera{
+          height: 100px;
+          background:
+         grid-area: camera;
+}*/
+
+       .camera_img{
+      height:50%;
+      padding-left: 18%;
+      padding-top:16%;
+
+    }
+
+        .camera_P{
+            font-size: 14px;
+            text-transform: capitalize;
+            color:#d4edf0;
+            padding-top: 15%;
+            padding-left: 5px;
+        }
+
+        .dekstop{
+            height: 100px;
+            position: relative;
+            grid-area:dekstop;
+           
+            
+        }
+
+        .flipcard_dekstop{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            transition: all 0.5s ease;
+            transform-style: preserve-3d;
+            background: transparent;
+        }
+
+        .flipcard_dekstop:hover{
+            transform: rotateY(180deg);
+           }
+
+           .dekstop_front{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+            background: url(./images.jpg);
+            background-size: center;
+            font-family: 'Roboto', sans-serif;
+           }
+
+           .dekstop_back{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+            transform: rotateY(180deg);
+            
+           }
+/*.dekstop{
+       background: url(./images.jpg);
+       background-size: center;
+       height: 100px;
+      grid-area: dekstop;
+      display: flex;
+      justify-items: center;
+    
+}*/
+
+        .dekstop_p{
+           padding-top: 34%;
+           padding-left: 5px;
+           font-size: 14px;
+            text-transform: capitalize;
+            color:#d4edf0;
+}
+
+            .weather{
+                    height: 100px;
+                    position: relative;
+                   grid-area:weather;
+                  
+            }
+
+             .flipcard_weather{
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                transition: all 0.5s ease;
+                transform-style: preserve-3d;
+                background: transparent;
+             }
+
+             .flipcard_weather:hover{
+            transform: rotateY(180deg);
+           }
+            .weather_front{
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                backface-visibility: hidden;
+                background: #2d8aef;
+                font-family: 'Roboto', sans-serif;
+            }
+
+                 .weather_back{
+                  height: 100%;
+                  width: 100%;
+                  position: absolute;
+                  backface-visibility: hidden;
+                  transform: rotateY(180deg);
+            }
+
+               /*.weather{
+               height: 100px;
+               background:#2d8aef;
+               grid-area: weather;
+}*/
+             .weather_img{
+             height: 40%;
+             padding-left: 40%;
+            padding-top: 10%;
+}
+          .weather_p{
+            padding-top: 6%;
+            padding-left: 5px;
+            font-size: 14px;
+            text-transform: capitalize;
+            color:#d4edf0;
+  }
+
+          .news{
+            height: 100px;
+            position: relative;
+            grid-area:news;
+           
+          }
+
+          .flipcard_news{
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                transition: all 0.5s ease;
+                transform-style: preserve-3d;
+                background: transparent;
+          }
+
+          .flipcard_news:hover{
+            transform: rotateY(180deg);
+           }
+
+           .news_front{
+                 height: 100%;
+                width: 100%;
+                position: absolute;
+                backface-visibility: hidden;
+                background:#ba1d47;
+                font-family: 'Roboto', sans-serif;
+           }
+
+           .news_back{
+                  height: 100%;
+                  width: 100%;
+                  position: absolute;
+                  backface-visibility: hidden;
+                  transform: rotateY(180deg);
+           }
+         /* .news{
+         height: 100px;
+         background:#ba1d47;
+          grid-area: news;
+}*/ 
+
+         .news_img{
+          height: 50%;
+          padding-left: 38%;
+          padding-top: 8%;
+}
+
+         .news_p{
+            padding-top: 3%;
+            padding-left: 5px;
+           font-size: 14px;
+            text-transform: capitalize;
+            color:#d4edf0;
+}
+
+            .music{
+                margin-left: 34%;
+                height: 100px;
+                position: relative;
+               grid-area:music;
+            }
+
+            .flipcard_music{
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                transition: all 0.5s ease;
+                transform-style: preserve-3d;
+                background: transparent;
+            }
+
+            .flipcard_music:hover{
+            transform: rotateY(180deg);
+           }
+
+           .music_front{
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                backface-visibility: hidden;
+                background:#db552d;
+                font-family: 'Roboto', sans-serif;
+           }
+
+           .music_back{
+                  height: 100%;
+                  width: 100%;
+                  position: absolute;
+                  backface-visibility: hidden;
+                  transform: rotateY(180deg);  
+           }
+         /* .music{
+            margin-left: 34%;
+            height: 100px;
+            background:#db552d;
+            grid-area: music;
+}*/
+
+        .music_img{
+               height: 60%;
+               padding-left: 13%;
+               padding-top: 8%;
+}
+ 
+         .music_p{
+            padding-top: 12%;
+            padding-left: 5px;
+            font-size: 14px;
+            text-transform: capitalize;
+            color:#d4edf0;
+}
+
+          .video{
+               height: 100px;
+                position: relative;
+               grid-area:video;
+          }
+
+          .flipcard_video{
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                transition: all 0.5s ease;
+                transform-style: preserve-3d;
+                background: transparent;
+          }
+
+          .flipcard_video:hover{
+            transform: rotateY(180deg);
+           }
+
+           .video_front{
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                backface-visibility: hidden;
+                background:#ba1d47;
+                font-family: 'Roboto', sans-serif;
+           }
+
+           .video_back{
+                  height: 100%;
+                  width: 100%;
+                  position: absolute;
+                  backface-visibility: hidden;
+                  transform: rotateY(180deg);  
+           }
+
+         /* .video{
+          height: 100px;
+          background:#ba1d47;
+          grid-area: video;
+}*/
+
+      .video_img{
+         height: 50%;
+         padding-left: 20%;
+         padding-top: 7%;
+}
+
+          .video_p{
+            padding-top: 24%;
+            padding-left: 2px;
+           font-size: 14px;
+            text-transform: capitalize;
+            color:#d4edf0;
+}
+@media only screen and (max-width: 600px) {
+  .container{
+           display: grid;
+           grid-template-columns: 1fr 1fr ;
+           grid-template-rows:1fr repeat(12);
+
+           grid-template-areas: 
+           "mail celender"
+           "internet store"
+           "image image"
+           "people photos" 
+           "maps skydrive"
+            "travle travle"
+           "masseging finance"
+           "sports sports"
+           "game camera"
+           "dekstop weather"
+            "news news "
+            "music video";
+  }
+}
+
+</style>
+
+
+</head>
+<body>
+    <section>
+        <div class="container">
+         <div class="mail">
+            <div class="flipcard_mail">
+            <div class="mail_front">
+                <img class="mail_img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAA5UlEQVRIie3TwUkDQRSH8bfRkwcLkERbEAL2ICJYgcdtwRZswRY8CVbhIViD2eA9AW/Kz8sEhlV312QOCvnDwGPe4/tmdtiIXf5McIGF7dPgfM2tMkETEeNC522qqjpu3wBsS25zRt8MPOJkA/AR7nvNKW+4wd4A8Ag1VjmgS3CJl1Q/46wDfoqnNPuK615Bqg9wi3d84A6H2eyP/UGCbG+KWWrNcZXWPO3NMO3jdDayb7wc8ka/FmT9CR7SmnTMbSYYmjbny39QOv9fsJ/Vi4gYl3iHiGjWRX6DOklKwOsCnF0K5ROv36JpYCKGrAAAAABJRU5ErkJggg==">
+               <div class="mail_p">mail</div>    
+
+            </div>
+            <div class="mail_back"></div>
+        </div>
+        </div>
+
+            <div class="celender">
+                <div class="flipcard_celender">
+                
+            <div class="celender_front">
+                <img class="Celender_img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAABHklEQVRoge2ZTRLCIAyFg+Mp1AN11YN47HY4x3PhoPQHGxwYQppvpYUGXh5Jp0rEBMAAYMaXCcDAvb91/HihCVumXuLHCwEAUt9bx7+U2khrPkIAjAD8jr0/M5Oan8sf8T2AMcxz0Q2eiG5Hyp1zLizASFQ2mfG9c+6xuMLNDHd+Lrnx1+P6aoTBTLTJxFxwL2XiM6wcsOz1NR6I7PjJ/ZY+87WxGpHOdX2hp+MVo9eR8GSVzvrkqHHEhEhjUyMpWnUzbs2ez5HAXoaCWzXGuKhxxIRIQ42Q7GI/eo8uPcblvI5Y+62MCZGGGiHWfqVh7VcaJkQaaoRY+5UG2xHpP6WqccSESCOuEU9E987+6PHhQ+zIMx7oAE/vPRsieQEp3xMjpC6JfwAAAABJRU5ErkJggg==">
+
+                <div class="Celender_p">Celender</div>
+
+                </div>
+                <div class="celender_back"></div>
+            </div>
+            </div>
+               <div class="internet">
+                <div class="flipcard_internet">
+            <div class="internet_front">
+                <img class="internet_img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAADvUlEQVRoge2YS4gURxjH/6Wua3TXdQWJb/D9ACOoCJKDGmJ8giwoEaNkRXIQQTQuCOYQLwE1uUjAg6iIuQSDRl3Ug/jCFwtiQEENihhlRZes78f6YH8eqse0k56erpreGQ/zh4Ghuuv//b7q6uqqTyqrrLI+CgGfARuBc8B9oB14COwFxuXq16mYkNkCugLfAuckNQbNP0maJmm4pPmSmiWdjEui6AIM8DVwA9gPfAHkHEzgG6Ax1/WiChgTTJOjwESHfqej2rukCDZK0gxJ4yWNljRIUs/g90rSI0kPJQ2T9I+kLZJuOYS4lhbrewG1wFrgb/z0GjgITE4Q64c0wbsAa4BWT/AoHQSGxcSsTwt+IHA6BqQV+MsziQfAzIiYBpifBvwo4HaO4K+BTcBU4LpnAgBvgcVZcccCfQqF7xcDfyIIsgpoKwA+o5fAlIKAs+ANcDIi0FOgHvtB2pECeFjNQO+0EqiPCHARGAlUA8dThs/o9zTga4GWLOM/gE+AXsD5iMCNwDxgEFAJDAbqsFPNVXMKTeD7LMPNQCegCmiKCLg6xstgN2wuOlsIvAGuhszWBe0VwJGIYPsSep5yTGK0bwITQyYbQu1bcgSantC3zjGBBt8EGgKDn0NtC2ICVSX07e2YwP5cXiZPoD8lVUqaZ4xpB4ZLuiCpJtkQpKbrxpiRURfyHWg6S1oSwFdI2qPiw0vSYK9e2C1y5n9D7EPueHWLYoydQiH4vrL78VKMfkZVxpjn2Y1Jz8S/qLTwktTm1QuYgK0QJFFlytB5leQJrFfCqSZ7XCyqYhMAxkiqc/CbleQmYIrjC/yjA8MHgbY7BroFdM/j2Rm44OD5BhjoA1+N3e+7ag/2mxHlWQHsdPTb5gwfBFvuAZ/RZWAp9rzQDRgALMaeIVz0FOjnm8CxkFHSVShtLfOFr8Ee0jNaj9u8TUP+pzFs3TKjJ0BPYChwr0jwTSTc2eZaRueG/v9mjHlijLkp6UtJd71HJpnOS5ptjHnm7QDcDI3GV1nX+gNnOmjkd5NnGU6awKuQ6f8KStgz8Qrg35TA7wALCwYPAb4IjNuJr9t3B1YCVzzBrwX9e/iyRu5xgKuyJXJJ+tQY05LPCBghaa3s1qNNUrXsO1YjW15/LKlF0hVJFyUdNsZc9gXPB/NraJTyVoWBIcBWYBdQ2yFQLgJG8N93oBmYG3FPH2ARcAhbeplRCtacAr7jwy9wK3AWW1q/EVy7hC07Ru59Si7gc+AAtirdFqwWJ4ANwKRS85VVVlnSO1wE/tWrg6DmAAAAAElFTkSuQmCC">
+                
+                <div class="internet_p">internet</div> 
+                
+            </div>
+            <div class="internet_back"></div>
+             </div>
+            </div>
+                        
+                   <div class="store">
+                    <div class="flipcard_store">
+            <div class="store_front">
+                <img class="store_img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABmJLR0QA/wD/AP+gvaeTAAADsklEQVR4nO2bO2tUQRiGnzHxfk3UgGJAUYPXQkQQbQRvIFiICl7+QcBfYCVYiEU6EQsFa7GxFRWRqGBrqaiIFkaNN+JqTF6L3RNH3TkzJ2fObk52n+qQ/ebNN++Z+WZmMzE0AUldwG5gFbAY+AS8AQaNMcPNyKkhSDos6Z6kUdVnVNJdSYeanWtUJK2WNOjotIv7knqLzs0U/Qsk7QFuAt3Wj8eAR8BT4DPVabAV2Al0WHFDwBFjzGDReRaCpO2SvlhvdUTSBUnLHfE9ki5K+m61GZa0pdG550bSQkmvrY68lLQtsO12Sa+sts8lzS0656hIGrA68E7Suozt+yQNWRrniso1OpK6JVWs5I9OUueEpfFZ0rzYuRaCpH4r8cc5tZ5YWqdj5ZgwI7Zgjb3W8/WcWnb7fTm1/qMoAzZZz49yaj106E5d/pn/83NqLbC03sfKsTBqy1/Ct0iaiaFjkqKO2iKmwFLr+UMkzeSANANYEklzQjA2tgGxhqx9QlzqjJoELW/ApA5DkjYAO4B629M5wMracwV4O7nU/mINf3J9AahOzBDwwBhTXKGsFbgbSueSFd/viQ2l39K8lBJXkXReUkf9HvxP1ilwFTjmifloPXdl1Hdh63x0RsFs4CwwECocbICkg8DxgFA7wW5nVDZsnTQDEs5I2hoinGUE7A+Ms5e+IgwIWVoNcCREOIsBK/0hQHOngM3akKAsBoQuP/YbirVkZZ0C/7ZxksWA0Lf5NWsSAdhGfglsE92A0Ld5EEDSZqAvg34a6yVtrD0fCGwTlG/wRkjSMGH7cAHPgF6qm6JYVIDXwDrC8h4yxvT4goIMkNQJ/AyNnyL8AmYZY+rtGicInQJdlKvzAJ3AIl9QqAGxilmj8daB6W6AN+9QA6IeQRtIewT4AtoGBArF2tM3mmhToKw1wPvipvsUaBdBX8B0N6A9AnwB070Ieg3wHnBqXzH/pLi/JBfJGNUT4bgrIKRTXYFxU5EOqjfQnIR0rKzzPyE1/7YBeQVKQGoBDzGgrCtAQnsEpH0YugqUmZYfAbkNaNeASIk0i5Y3IHcRLLsBLV8DUvNPPQ2qeitzlPIehgDGgZmuE6GvY2U+CSak3i71da7s8z/B2Y9WMcBZB3wGRL2Y3ESc23mfAamXC0rED9cHvlVgGdW7vjNjZ9RAKsAKY8yneh+mjoDaxePLRWTVQK64Og9h3wrPBq4Bp2Jm1SBuASeNMSOugCy3xHYBh4C6//Y6xRgGbhtj7vgCfwP3dXXL/lCh2wAAAABJRU5ErkJggg==">
+                 
+                <div class="store_p">store</div>
+                </div>
+                <div class="store_back"></div>
+            </div>
+            </div>
+
+                <div class="image">
+                    <div class="flipcard_image">
+            <div class="image_front">
+            
+                <div class="img_p"> image</div>
+                </div>
+                <div class="image_back"></div>
+               </div>
+               </div>
+
+               <div class="people">
+                <div class="flipcard_people">
+            
+                    <div class="people_front">
+                <img class="people_img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAIAAAAmKNuZAAAABmJLR0QA/wD/AP+gvaeTAAACFklEQVRIiWN87mPDgAO8+fl7zv1nO16+ffTtBwMDgzwXh7uEcIqClAg7Ky4tjLiMO/3+U+Lp629//UYTF2FnnW+iZSLIi1UXE1bR1z9/x526hmkWxMnxp7FL4TRu1r2nH37/wSrFwMDw7tfvWfeekmDc7lfvcJkFVfDyPQnGQcIeD3iIQwF241gYGfEbh0sBduMkOdnxGyfFyUaCcaaCfPiNMxXCrgC7cb6SIviN88GhALtxdqICuOxnYGAwEeS1FREgwThGBoYWbSUOZiyyHMxMbTrKuGIKu3EMDAx6/DwzjTQwxWcaaejy8+DShdM4BgYGN3EhIgWJMu75j5+Ygk+/YxEkYNyvf//WPX0dcfIqplTc6Wvrnr7+9e8fVo3oBdTnP38n33m89NHLdzjKDAgQYmONkhXPVZXhY2HBadyW529qr9578eMXHoOQgQQHW5uOsqeEMFwE4dkpd5+knr1BvFkMDAwvfvxKOnO99foDdOMm3XmCLEoSmHL3yQxY8Qc1bsqdx+SZBQH9tx6jGPf5z19KjPv05w+KcZzY8hPxAK4dShWryREoMHEDRgaGUjV5CJu5RE2OgYHBTIjPXlTw/e8/D7/+wJ5AsQFWRkZ3CeF+fTU/KWh5hZ6Mv/z5e+ztx4sfv9z8/O3p9x8vfvz6/vffp99/GBgY+FhZOJmZJDjYpDk5NHi59Pl5LIX5eViYkbUDACaMuMCjeojkAAAAAElFTkSuQmCC">
+                
+                <div class="people_p">people</div>
+                </div>
+                <div class="people_back"></div>
+               </div>
+               </div>
+
+                        <div class="photos">
+                            <div class="flipcard_photos">
+            <div class="photos_front">
+    
+                <img class="photos_img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAAB90lEQVRoge3ZTWoUQRjG8bQozJi4dNAzuAiu4lojbkTQQ3iMfEgWyQG8gGcQxLXoXgNmkYBBwUVcC46IvyymJjRtT3dP2zNdaD0w1MzbvFXPv+utKrpnZSUpKem/UAZ9m+hCl/o20JUuT79kWZb1aaStphX1z8xIAolNCSQ2RQOCq3iGE4xDu4Nh0w70fShiiHfK9bYK5sJ/JCC7wcYn3MMqNnEa4tsVuVGBnAQbdwvxzRA/rsiNCmQcbKwV4tdC/EdFLmi82DHC+t8YrtCX0G4U4ndC+7m2hyYzEiAO8RGD+X3WetgJNk5DOa3hfm6NbNX6rwPJQUx1sACQocnuVKY3VTevEUgB4hi/wqdYAl3ADLAdxhmHdquuAmpBcB0fwuUj3MBB7nezg2rBqgQpzMQhRiE+MFknsD+j4yvLAMiNVw4yCyJ3fSNXYg/xGHt4hbOynKWDlJXTjOR91TrCzV5A6maikDwtsbMwE3t4gvWmfSwSZC4DZuwm89yQLlQGUllOc3aeL9Gq8ru9CJBOIHIDNIH5aXKqt34uKgNZ5k4zxHP8DmO/1nJz+AOka7MNTTzA12DhGx616KN/kGBkhJe5yniB1Tny4wAJZjI8xfeaNTVTUYBMhVt43wbk4m18evcbiRJIbEogsSmBxKb0r25SUlJSLzoHG4CZaAyB5VAAAAAASUVORK5CYII=">
+                <p class="photos_p">photos</p>
+               
+            </div>
+           <div class="photos_back"></div>
+        </div>
+        </div>
+
+                <div class="maps">
+                    <div class="flipcard_maps">
+            <div class="maps_front">
+                <img class="maps_img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAAABmJLR0QA/wD/AP+gvaeTAAACoklEQVR4nO2cy4rUUBRF17FbbHQgio+JA3Ug+CpFsRz4+A4/0R/wC7QFLbpRsRw48AGCYIszxUFVHwdJSCiTyk3d5DZd7AWXUHRys3P6ZM1OQAghhBBCCCGEWA/c/VLIeZsJgpwEbgIPgIfAPWALeA9MgQ/ADrBrZn+GztMh43nA2q5tPaFjkKPAKA9xN19XA+8zB75SFnSHrMCfzcwPIqOZDVdAd98ArpP9t+7nxxv839W/gV3gNTABXgGz/CFGwK38eKXmWoBfwBvgXWVNzezvChnH+e+mjJM851PouYDufpGyUGPgDnBi4bQZ2atZFGpC9rDzyj7bwL6ZPVrYf4vs4UaVdRs4XRNnBnwkK+ZbysJuBmackhWqWIsZHXosoLv/AM7W/OlTJcSEAI+5+3PAzexx4L0vEN6tdaySsfcCFg56RtnmEzP7GXJ93yzp1jlloVbO2KWAwRtWirj2dHneI0OHWcTdt/PX+FDs20byAgL7wBDdPNS+8egVbuYgOnCtkAMjkQNTIAc2IwdGIgdGIgemQA5sRg6MRA6MRA5MgRzYjBwYiRwYiRyYAjmwGTkwEjkwEjkwBXJgM3JgJHJgJHJgCuTAZuTASOTASOTAFMiBzciBkciBkciBKZADm5EDI5EDI5EDUyAHNiMHRiIHRiIHpkAObCbFxPoZyvHT4rjBijPAiTIG02las2160d2Pk83oFmHGwOXALLUzwGb2LTBj7RxyRMY9MzvXdt+VC+jlNPi4spZNgw86se41c8geMVVvZl+WVyWj67zwE8o2b5sGr51YX3KPlBPrS6fqu9C1gIt8p/xAxAvgZd9f3nD3U2SFLT4QcY2si44FbjFoxi4F3KOHafA+WNKtvUys944HfoRGCCGEEEIIIYQ4BPwDXPOjhconDv8AAAAASUVORK5CYII=">
+               
+                <div class="maps_p">maps</div>
+            </div>
+            <div class="maps_back"></div>
+        </div>
+        </div>
+
+        <div class="skydrive">
+            <div class="flipcard_skydrive">
+            <div class="skydrive_front">
+                
+                <img class="skydrive_img" src="data:image/png;base64,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">
+                
+                <div class="sky_p">skydrive</div>
+                </div>
+               <div class="skydrive_back"></div>
+            </div>
+           </div>
+
+           <div class="travle">
+            <div class="flipcard_travle">
+            <div class="travle_front">
+                <img class="travle_img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABmJLR0QA/wD/AP+gvaeTAAACSUlEQVR4nO2ay2oUQRSGvzPeMWSjoii6kHjBhZdF3kARL6AvoGtxozufIlsRFARx50ZhTHyGiGJcJerKBBTURbyAopPfxcxI2zDTNd3pPl7Ot5oaTnV99XdV96ILgiAIgiAIakTShKRbkpYkdTSYTq/mpqS93t6rgqQTkj4NmfQgPko67u1fCUm7JC2XmHyfZUk763RcW+fFgavAeKa9AMwA3wbUbwBOA/t77XHgCnCtLsFakfQkczdfS9qc0Ges9xzo87hOx1IrQNIxundqAshOqm1mdzLtbbmxbktKGaKV+b09N/ZF4Gzmry/AK+ChmT1LuXhpJO2R9GjInp3K1S9W2P99FnPXnBpSOy1p9yhzahWX/Br4EDALnBxlgIY5BcxKOpjaISkASZuAB+SW4x/KDuC+pI0pxakr4DLd/f63cAC4lFKYGsCF8i5uJDkXBiBpPXC4sk7zHJW0rqgoZQVsAay6T+O0gK0pRUWsqe7iRqF78mvwXyUC8BbwJgLwFvAmAvAW8CYC8BbwJgLwFvAmAvAW8CYC8BbwJgLwFvAmAvAW8CYC8BbwJiWATu0W9VHonhLAe2ClukvjrADviooKAzCz78Dcahg1zFMz+1FUlPoMuFtRxoMk59QArgMvyrs0zjxwI6UwKQAz+wqcA95WkGqKN8B5Mxt0EOs3kl+DZjYPTALTJcWaoA1MmtlCaoeRDkmZ2RJwRtIRuoek9gFjmZL8w7JN9+tyFT7k2nPAvUz7M/CS7iGp5xXHCoIgCIIgCIIg+D/4CeOCuTMUiP1TAAAAAElFTkSuQmCC">
+
+                <div class="travle_p">travle</div>    
+            </div>
+            <div class="travle_back"></div>
+            </div>
+            </div>
+
+
+            <div class="masseging">
+                <div class="flipcard_masseging">
+            <div class="masseging_front">
+                
+                <img class="massege_img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABmJLR0QA/wD/AP+gvaeTAAAEJUlEQVR4nO2aTWgcZRjHf0/T1NZKo2JQo2JALRZUsAYPFsSCENOiiIIFES1iDyJe/AAvFTx4EPHgSQRB8SR6EIQg1OKhfqHtQatYUUst1BTqR/pFmoQkPw+7hWUyO7uzM/vRuD9YwrzzvP95nv9M3n33fQf69OnTp0+fPv9XohMXUQeBYWBtGy8zHRHTbdTPh3q9+rr6s51jRt2jPlU1vSuFD6i71fkOFp7Gb+qWThc/qH7Y5cJrmVUf7qQBb3S74hRm1Dvq5VzaIFi9yP4yNUvkAHBnRJg8sarEi7xEbxYPMAZMpJ0oxQB1LbCtDK02kjoWrC5DOSJmgfVlaNWirgKGgBFgMzAOPASsa0FurMTUuoc6pD6vTuccDE90O/dSUa9Vv8phwOk0ndyDlnolcC9wHXBpwToaMQNMAfsi4teUXNYBk8DWJrTORMSGljNRN6ufqos5H72y+F59ICWvy9SjTfRPfQKaLf5FdaGd1eXgfSvfOrX5TTTRrzUD1FfaW09LTKoDiTy/btAn1YDMeYC6HdjdknPtZRvL83qnFaG6g6C6GvgRuLkV4Q5wDtgYEccA1MuBE8BAnfjUQTDrCdhK7xYPlcnQE+cPIuJfYNk3RSOyDEidO/cYyen3wbwCWQbckFesC9yYOJ7KK5BlwBV5xbpAMsdTeQWyDOjVn7a1JPM/W1TgQmfZgkcjVpoBuekbUJLO38AvwGJGzBTwO9mP6dHqp2MUNWAOeDwihiNiE5Wvzm8SMSeB7RFxTUTcBNwGHErEHAPuiojRiBgFtlTbyiTf+NDEjwvVl1P6jahna2KeTIm5RV2qiRlPiRlv5ldRos9zGaGpT1bRJ+CTZENETFFZHs+K+Qk4XD2cAfamaO+tniuLI2mNRQ2otxC6vomYS6p/B6ufJGvqtLfKZ2mNRQ3YlWxQx4DbG8TcD1xVPRwEdqZo76Q8A+aA93L1aHIMUH1L3WhlaWqHOpU4v6C+qo6qw+ou9WQi5pyVld6R6ueFaltDEjnXGwNey22ZzRvQVZow4Et1Tb06V/pEaA8wERHz9QJWqgHHgGeA+yLiTFZgKVtjPcQ+KnsWX2Td9VpWlAERcSBvn6x/gax5fa/Q1F3OIsuAzP+dHiH3EliSLAP+KCreAX4oKpBlwLdFxTvAx0UFsjZGhoDjtPYyQic4AmyKiLkiInWfgIg4BbxZRLyNLAJPFy2+IerF5nsJoRMsqc+2tfCECRvUD7pc9Hn+Uh/sWPEJI+6xsjf/TxcKP2jl9dvW3/CoQ0ubH+oIcDVwK/BuCxLzwNtURvGsFxdmgePVjc/eJOedXFI/UpN7ehcu6ukmi/9Ovbvb+ZaOur9B4YfVR9QLYa8xP+pjdQr/08oy10XdzjGLUu6KugN4lMqs8RDwOTAZEQtl6Pfp06dPu/gPu9TEb3uDhIgAAAAASUVORK5CYII=">
+                
+                <div class="massege_p">masseging</div>
+                </div>
+                <div class="masseging_back"></div>
+            </div>
+            </div>
+
+            <div class="finance">
+                <div class="flipcard_finance">
+            <div class="finance_front">
+                <img class="finance_img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAAAn0lEQVRYhe2UQQ6DIBBFBy8h6RX1uJr2Nq+LYmKITDsKpAbexgXMn5dBEOm0jtMWAZKFzqm1qay4brCElEAVcAER8SKy1lGKADzw5MP2TR6NkmOvA0ZgCbUv4PFrULzPLHDU3BJ0SSDVvIqA1tzCFYF598P5XA2tRzBZmmcXOMNZgf9+CTVyjfS+E2hPoNQ1us8E2hMo/nR+E6hFF+h03lafOxTlFO+NAAAAAElFTkSuQmCC">
+            <div class="finance_p">finance</div>    
+            </div>
+            <div class="finance_back"></div>
+           </div>
+           </div>
+
+                    <div class="sports">
+                        <div class="flipcard_sports">
+            <div class="sports_front">
+                <img class="sports_img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAAChklEQVRoge2ZP08UQRjGZ7mDhE4sNCgh+gFstBKo1Aa+A5LYGTsTLUwoKIyNBaIhGmN5IsYKrbCzUz+CdkCMLRqEu939WdwceW/d2b2dmds1ZJ/mNnM7z5+52Zl955SqUaOGFYAGcBf4DkTYIQK+AcvAWJnmR4AtS9MmbAFBWQHueDbfw+2yAnwVoveAUUueUeC+4Prs26sCFoAvwJFh1JzmLjBm4D3SuvOu5uOs39zFvNDJQmwdQo9AJkoIALZTi/5pM5Em6DuAaDstmg9NfTOXLUkYBEGQ124LF50RV/GqUQeoGic+QNS7oMyXrX/1ItN9eQF+iutLTo6KQ+r9MN2UF+CTuF4BSplyWmfF4KMQ0WxiR9wGrgMd0dZwNNsQXB3N/1G0xcBVF4G17F2eSccA53L4V134FdDMCXHNkf+GgTcGVnH8haXQDNACdoBQCD1x5H0quELN38Jl2gwgOgm0tegv4KwlzxlgX/N0gPO+vWaJb4qR26BgPQsEwFvB8XpYXk0GLgIHwsDDQUNo849E3wPgwrA9pxm5lXjwNslZleiuOu8S/ZbK8pxmaDlh5jfwHJgHpoFx/bkAvNDfSzyozLwIsaQf5iLYBxar9n4MPcqvgMMc43+Al8BU1Z5TAUwAN4H1hPF1YBE45VNvqEd54Ld2TsOJL2j+ezgHAOaAN8Ae/e9IJO6TCIFdujv4rKsHW+NN4FmBZTMLa0Cz7AC+zB+HKNP8XEL8PXCZAY/Z6R6rXwE+CI4YmBm2956BDSG8jWWtTPefHlk+tnx7NQnvCVGfFdlO0f5WmwsQKqX8lHr9iIIgKPQw2y6jxoMmR4RFO9gGeKyUalv2NaGteWvUqFEAfwHaXh7g3RQPhgAAAABJRU5ErkJggg==">
+                
+                <div class="sports_p">sports</div>
+                </div>
+                <div class="sports_back"></div>
+               </div>
+               </div>
+
+               <div class="game">
+                <div class="flipcard_game">
+            <div class="game_front">
+                <img class="game_img" src="data:image/png;base64,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">
+                
+                <div class="game_p">game</div>
+
+                </div>
+                <div class="game_back"></div>
+                </div>
+                </div>
+
+                <div class="camera">
+                    <div class="flipcard_camera">
+            <div class="camera_front">
+                <img class="camera_img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABmJLR0QA/wD/AP+gvaeTAAAFbUlEQVR4nO2aW4hVVRjH/1u76DAz5kwREQoZ1YM6Sle6EGJQlJQyhdBLWPpeSUh462JCBSVh0EPWQ5RSPUxq0kOERpglVi+R9hDCmDNpqTOeLCKdXw/rW5zFnuM5e++z9zlq+w+btde3vtv61n3tLZUoUaJEiRIlSrQIwHzgM+AY6XEUGABub3c9MgFYAYxlqHgcp4FlrXL6AeBQHWcOAfcn0LPAKn8GeA64MoMv04E3zO6/wK3ZapXOaL3Keww20DEF+NV4V+bg05um60fg0lhZvMESNVA9YwBkLTeeTca2D7goszNVfZ3AQdO5LlZWq8HqNlAjY00FADfpjVmXvTGzI/X13nQ2f5I0kGecBGwAhs/a0ZvDuoZOpA/COyl9GAJeBybVUrYh9ypX8RWxsZpTAKYCBzL481otZb7lb8nb0XMFwG1Wx6FahUCCsXKeI17PCXUY9wLfXIi0mohHplaPuBBo8XzTa3IeADZJulnSNQFtVNJBSfuKtF0vAHsljRVBAy6XtCIoWxq8n7K0W9Ice2Ryr0p6JYqiY036Mh6tmgSBJ4BRM3ca2Ak8BcwEugK+LqM9DezCnSEARoAlTdivXc+iAwBcArxPFduBmSnkZwE7Avn3gIsz+JFvAEgwy+J2mZ+aiQqwKCjrBZYBW3Gbmj/tOQB8AiwFegL+ftMBsI2UG6wiAtBQDnjX2AaB2UbrANYCJ4NWrQD77akE9JPAGqDDZPtMF8DbufhbVACAJUElfOWnAz8Y/TjwAtBXQ3YO8CJwwni/B6ZZWV8QpMea9reIAACXAb8byyKjTccdSsDNCT21ZGN6eoEtJjMUBKHfaEeBKU35W1AAXrbi7ZbvCFo+1ekQiID1QU/ww8FPjC815W/eAcDN+kdxS91Mo631LZ/WjslHQU9YbbTZuCXyNxKsCq0MwEIr2mn5Xtw8cDxJt69jrxe3Fxj1eoAvzdaDaf0962EoB8yzdKuliyR1SdoYRdHxrEptF7hRbqe4MGZjXk2hJCigB+yxIt/9t1p+3GyfweZc0zVg+dmW353V3yIC4G+Buy3/M3Ayrf46divAAXufYrYaXn62MgB/A5VaDucBC2hc/19p/S1yDqilO8pRPxp/yktdnyIDMCqp0w8BSUOSrspR/xWShiW3v5DUKWkkrZIiA/CLpdMs3S+pK6dJ8HpJPZJ+MtLVMZuJUWQAvrb0Xku3W/pIDrr9adLrnB+zmR4FTIJ3W9Euy/fiNi8ngN4m/OzE7fpGqG6E/FH7rqz+FhGAiVS3wrOMtsbYtwCZJkTgLdOxyvIzgH+AI8DErP4WdRh61op3WL4Dd5ABd7BJFQTgGZP9DphstM1GW9FIvq6/BQVgMtUNUb/RpgGHg57QcDjgjtX+C/Nhqsfhe3AHoUEfkMz+FhEAK19sLBVsBbAg+J4wAqwD5taQ7cOdIP8IWt5X/lrcbzZjwMNN+1tUAIzH3wsMBkHoAFZTvSEGOIW7C/R3gx6jwEqq3f463E4QYH0u/hYcgAnAx0FP6A/KenBX5QNU7wL93eAA8DgwNeC/D3ekBvgQSLWUtyUAxhcBz1P9SepzanT7OvI3AB+Z/Jj1qtT7mLYFIOBfTPU3ljO4y4zluCNtd8DXjfsW8CTwBW45BTeMEo/5xP62KgAmMxm3RB5hPPx3gTiO4H6zSzTbJ/U3CgskKYqitGtzJjmTnSjpDkkPSbpT0gxJfryfkNvb75a0TdKeKIrOpLWR2N9W9oB2Iu5vHp/H90qqNOQ613G+tWRWxOsZLiP+cqH430/bBGCBvQ57WjgEtkhaLunb/0FH+MC/hAFYZemjyvfq6lzCsKTNkla325ESJUqUKFGiRPvxH62wULHa0gxlAAAAAElFTkSuQmCC">
+                <div class="camera_P">camera</div>
+                </div>
+                <div class="camera_back"></div>
+               </div>
+                </div>
+
+
+                <div class="dekstop">
+                    <div class="flipcard_dekstop">
+            <div class="dekstop_front">
+                <div class="dekstop_p">dekstop</div>
+                </div>
+                <div class="dekstop_back"></div>
+               </div>
+               </div>
+
+                <div class="weather">
+                    <div class="flipcard_weather">
+            <div class="weather_front">
+                <img class="weather_img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAABmJLR0QA/wD/AP+gvaeTAAAB90lEQVRIib3Wv08UURAH8F1iJ7ZoDNWV/ijVIHKBa2ysCPwHYKzpDFiI/CfQ0gj/gFIa0L+A+AeYeJwSrrqPxc7G53K3u0fhJC+bnf3OfHdm3rx5WTal4BO+TGtX5/A5nozRgzH6RTy9CdEFrtBpIkIHQ/y8CdFB+DxsQXQY6oObEM3jMhwsJfoTfE7eu4G5xPzUROHkXTh5XYN5E5idNg4X8QP76V8hx0Pcwx6+4nesM3zAXTxAXsnGQdT4VUr0LJRlCnZKQ6xjYLIMsBbYmchCmfIrLFej6iRFFZGsYxTvH7GM27FWcBTfRljD48T+UGXHVgm72Ih0lZG8rcFvB+YCc9iUbJ42ddsrI2mBLSPbbU2QGH8L4+UW2F5gz+pA3yvFPQl9mbbZFkR3ko0xO87nzDi7Jsd1nFPqs0zRM7DS6L1F6sZFVMpxPLeaiBLMUQtsIbG9t3A/qdN2DX4nMP3Y3ht4UUdQbdiuognLhj2KFM3G6uE4vo2wikeJ/fWGVQy5YQCqR9CaohknSR+rgc0VDVweQUMsVIkGrh+qM4oDcw67OMWvWKd4H9/GHar74XMhaxJ/x8RmDaYcExPr2EQyafD9cznBUpLy6Qef/zjKB1HMaS4n/Un+btVwvcyyLMvz/Lzpp/I8P0cvy7JRE7a1qFxO2sofEa68AHQj3Q0AAAAASUVORK5CYII=">
+                <div class="weather_p">weather</div>
+                </div>
+                <div class="weather_back"></div>
+               </div>
+               </div>
+
+
+              <div class="news">
+                <div class="flipcard_news">
+            <div class="news_front">
+                <img class="news_img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAAB9ElEQVRoge2Yu07kMBSG/0FDRQ1LTTk8AKLZAvEEKy2i4SIh0fIuSAiJaul4A7p9AQYtl4KGhooCISGEoADpoxhHsjIxSew4yTL5mpn4OMfn9/FxEksdHR2lAE6Bc2CQYVsEznLs58Awkn0A/AP+FhGS8ArsWu2bwEtb7Om4e1lCUk1/TL8tc30sCUnbNdplXY8C7/XGYh8TYkjP0BuwZ/Vrwr7ryohTiPk/YLReh8BiRt/a7V5C2ogrvqkmgolBP69DW7KTV9yTk5GE3O0uEkVXxORlpC214mJyMtJUbZTl22SkE9I2oj7Z7fqqyo+LyclIQpndK2v2Y+9+3yYjpYUAv4Ad4Nn6evsA1nPu86ZIXIWXlsWJpA1JF5JuJB2Z9ncPX5XhI2Ra0q2kJ0n3kn5KWja2NddNba+RvqQfkl4l/Q4PJyyQsrxIWpV0J+nStC2YdiexnyM+QlYk7Wu0xJIl9W7a20N6p/A5VYl5EtOdoiS0/QvRp0a8cE1EUsihE/W/fiEOc3s0dWT61bjALHBlutwA86Udxn5HyhPiJSKmkLw+jnv8RHw1M6GUFRIkIsthXdjjBotIO6wTK0nhImyHFcdZeFzg2vqdC3H4YBwtVRhnkXFJifEXYRweuAqzJsJFGCEzwCHw2ICIs0pEdHR0jPEJocwgtH6AdX4AAAAASUVORK5CYII=">
+
+                <div class="news_p">news</div>
+                </div>
+                <div class="news_back"></div>
+               </div>
+               </div>
+
+
+               <div class="music">
+                <div class="flipcard_music">
+            <div class="music_front">
+                <img class="music_img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAABzElEQVRIieWWzUocQRSFTzuCEHDjzp9xRHTjm/gTEyJu1LyAREQfRNeCTyAquPARXMadkIDiItFRV+NI3Kj5XHiF6rK6rW47G3NhaKb6nPPdukNNt/S/VRIrBOqSPkmalDQkqW63fkk6lbQvaS9Jkt+VdAb0AxvAHa/XA7AFNN4KnQbaEUC/2sDHstAl20HZegC+ldmpD70E1oApYBD4YJ+Gra0DVwF43M55+k3d8V4Dy0BXhLcLWDGP6++NAW86pp/AWFTH6YxR4MjJ2XjNUAfuTXwA9BSFOlk9lgFPJ6I/T7xkwu2ywEDmjmUuuusdnm7crrtVgZ2siTzwiF2/Vwg+9LJfFnBjY+muigp0W+ZNngiAqqB5uf6on4XnwAIw/AbYMPAVaEZ35tRf4EsJ6Ix5U+Vq/B3fet8TSZ+LgiVN6+UjN5Xtgy8CIWUecUOBtdTIffDlPwSnsmN2PAB0xhJN2xe4lcr2waHXlpqkgViwaUONnuWBTzLCiow7NGZJOs4DHytcWWGhymoyF/wjw/SnADhLm5UtAQnQdM58C1gFarFUoGaelpPTBPJfpYFZM7WBuVhgIGfeMlrATKypEwj+jxeEdxQ5iu+7HgGYonytMIyZJgAAAABJRU5ErkJggg==">
+                 <div class="music_p">music</div>
+
+                </div>
+                <div class="music_back"></div>
+                </div>
+                </div>
+
+                    <div class="video">
+                        <div class="flipcard_video">
+            <div class="video_front">
+                <img class="video_img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAApklEQVRIie2RsQ3CMBBFv1HEBpShT8EeWYAVsgKzsAgNk9DGPS0FxaOJJZMiNpwtRYJXWbL1vu++9CcXoAc8dkagD14XBYyS2kL/9c65/XwCAKzmuWdjFaZYRwBwBQ6mpKUOpqsncAZ2X3kyAgJ34ARsawUEbsAx5bGW/Mh+uYYVVS35AnRLYlPAJ5QuOUn1gCY6e0ltiTVNLknvEwzxhVE+FPD8Ci+X2E7H9AkcrgAAAABJRU5ErkJggg==">
+                <div class="video_p">video</div>
+            </div>
+            <div class="video_back"></div>
+        </div>
+        </div>
+
+    </section>
+</body>
+</html>
